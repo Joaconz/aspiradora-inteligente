@@ -8,7 +8,7 @@ const Form = (props) => {
   const [horas, setHoras] = useState(0);
 
   useEffect(() => {
-    if (minutos != 0 || horas != 0) {
+    if (minutos !== 0 || horas !== 0) {
       cambioProps();
     }
   }, [minutos, horas]);
@@ -37,12 +37,12 @@ const Form = (props) => {
           onSubmit={(ev) => {
             ev.preventDefault();
             if (props.name === "tiempoEncendido") {
-              if (ev.target.tiempoEncendido.value != 0) {
+              if (ev.target.tiempoEncendido.value !== 0) {
                 console.log(ev.target.tiempoEncendido.value);
                 setMinutos(parseInt(ev.target.tiempoEncendido.value));
               }
             } else if (props.name === "encendidoAutomaticohs") {
-              if (ev.target.encendidoAutomaticohs.value != 0)
+              if (ev.target.encendidoAutomaticohs.value !== 0)
                 setHoras(ev.target.encendidoAutomaticohs.value);
             }
           }}
